@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 app.get("/api/whoami", async function(req, res) {
-  console.log(req.params);
+  console.log(req);
   res.end();
 });
 app.listen(process.env.PORT || 3000, function() {
