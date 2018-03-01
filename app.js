@@ -3,7 +3,7 @@ const app = express();
 
 app.get("/api/whoami", async function(req, res) {
   let json = new Object;
-  json.ipaddress = req.rawHeaders[21];
+  json.ipaddress = req.rawHeaders[23];
   json.language = req.rawHeaders[17];
   json.software = req.rawHeaders[9];
   res.json(json);
