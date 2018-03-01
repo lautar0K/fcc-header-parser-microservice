@@ -5,6 +5,7 @@ app.get("/", function (req, res) {
   setTimeout(res.redirect("/api/whoami"), 30000);
 });
 app.get("/api/whoami", function(req, res) {
+  console.log(req.originalUrl);
   let json = new Object;
   let headers = req.rawHeaders;
   json.ipaddress = headers[23];
