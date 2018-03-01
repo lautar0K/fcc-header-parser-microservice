@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-app.get("/api/whoami", function(req, res) {
+app.get("/api/whoami", async function(req, res) {
   console.log(req.query);
   res.end();
 });
