@@ -4,7 +4,7 @@ const app = express();
 app.get("/", function(req, res) {
   res.redirect("/api/whoami");
 })
-app.get("/api/whoami", async function(req, res) {
+app.get("/api/whoami", function(req, res) {
   let json = new Object;
   json.ipaddress = req.rawHeaders[23];
   json.language = req.rawHeaders[17].substr(0, 5);
