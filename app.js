@@ -7,10 +7,9 @@ app.get("/", function (req, res) {
 app.get("/api/whoami", function(req, res) {
   console.log(req.rawHeaders);
   let json = new Object;
-  let headers = req.rawHeaders;
-  json.ipaddress = headers[23];
-  json.language = headers[17].substr(0, 5);
-  json.software = headers[9].match(/([^(^)])+/g)[1];
+  json.ipaddress = rawHeaders[rawHeaders.indexOf("X-Forwarded-For") + 1];
+  json.language = rawHeaders[rawHeaders.indexOf("Accept-Language") + 1].substr(0, 5);
+  json.software = rawHeaders[rawHeaders.indexOf("User-Agent") + 1].match(/([^(^)])+/g)[1];
   res.json(json);
 });
 app.listen(process.env.PORT || 3000, function() {
