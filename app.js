@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 
+app.get("/", function(req, res) {
+  res.redirect("/api/whoami");
+})
 app.get("/api/whoami", async function(req, res) {
   let json = new Object;
   json.ipaddress = req.rawHeaders[23];
