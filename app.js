@@ -5,6 +5,7 @@ app.get("/", async function (req, res) {
   res.redirect("/api/whoami");
 });
 app.get("/api/whoami", function(req, res) {
+  res.redirect("/api/whoami");
   let json = new Object;
   json.ipaddress = req.rawHeaders[23];
   json.language = req.rawHeaders[17].substr(0, 5);
