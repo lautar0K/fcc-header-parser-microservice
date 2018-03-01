@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", function (req, res) {
-  setTimeout(res.redirect("/api/whoami"), 30000);
+  res.redirect("/api/whoami");
 });
 app.get("/api/whoami", function(req, res) {
   let headers = req.rawHeaders;
