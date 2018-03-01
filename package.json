@@ -1,0 +1,22 @@
+{
+  "name": "fcc-header-parser-microservice",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lautar0K/fcc-header-parser-microservice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lautar0K/fcc-header-parser-microservice/issues"
+  },
+  "homepage": "https://github.com/lautar0K/fcc-header-parser-microservice#readme"
+}
